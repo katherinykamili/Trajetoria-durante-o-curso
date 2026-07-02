@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados essenciais: charset evita problemas com acentos e viewport garante responsividade. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Álbum de recordações digital sobre uma trajetória de curso, amizades, aprendizados e gratidão.">
+  <title>Álbum de Recordações | Minha Jornada</title>
+
+  <!-- Google Fonts: A fonte Inter combina bem com interfaces modernas, minimalistas e elegantes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icons/site-icon.svg" type="image/svg+xml">
+
+  <!-- Arquivo de estilos separado, conforme a organização solicitada. -->
+  <link rel="stylesheet" href="css/katheriny.css">
+</head>
+<body>
+  <!--
+    Link de acessibilidade.
+    Ele permite pular direto para o conteúdo principal usando teclado.
+  -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!--
+    Cabeçalho fixo do site.
+    Contém marca, navegação, alternância de tema e menu mobile.
+  -->
+  <header class="site-header" id="topo">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="#hero" aria-label="Ir para o início">
+        <span class="brand__mark" aria-hidden="true">K</span>
+        <span class="brand__text">Memórias</span>
+      </a>
+
+      <!--
+        Menu principal.
+        O JavaScript destaca automaticamente o link da seção visível.
+      -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#jornada">Jornada</a></li>
+        <li><a class="nav-link" href="#momentos">Momentos</a></li>
+        <li><a class="nav-link" href="#amigos">Amigos</a></li>
+        <li><a class="nav-link" href="#professores">Professores</a></li>
+        <li><a class="nav-link" href="#aprendi">Aprendi</a></li>
+        <li><a class="nav-link" href="#futuro">Futuro</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!--
+          Botão de tema.
+          aria-label é atualizado pelo JavaScript para informar o estado atual.
+        -->
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar para modo escuro">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <!--
+          Botão hambúrguer.
+          aria-expanded informa se o menu mobile está aberto ou fechado.
+        -->
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="nav-menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal do site. -->
+  <main id="conteudo">
+    <!--
+      HERO
+      Primeira impressão do álbum. O título recebe efeito de digitação via JS.
+    -->
+    <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal">Minha trajetória durante o curso</p>
+        <h1 class="hero__title reveal" id="hero-title">
+          <span id="typing-title" data-text="Desenvolvimento Web Front-End"></span>
+          <span class="typing-cursor" aria-hidden="true"></span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Uma coleção de aprendizados, amizades, desafios vencidos e momentos que ficaram guardados com carinho.
+        </p>
+        <p class="hero__intro reveal">
+          Este espaço foi criado para celebrar o caminho percorrido, agradecer às pessoas que fizeram parte dele e imaginar os próximos capítulos.
+        </p>
+        <a class="button button--primary reveal" href="#jornada">
+          Explorar memórias
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!--
+      MINHA JORNADA
+      Timeline com cards para organizar começo, desafios, conquistas e evolução.
+    -->
+    <section class="section" id="jornada" aria-labelledby="jornada-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Minha jornada</p>
+          <h2 id="jornada-title">Cada etapa me ensinou algo novo.</h2>
+          <p>
+            Entre dúvidas, projetos, entregas e descobertas, o curso se tornou uma experiência de crescimento pessoal e profissional.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card reveal">
+            <span class="timeline-card__step">01</span>
+            <h3>O começo</h3>
+            <p>No início, a insegurança de migrar da saúde para a área de tecnologia. Aos poucos, cada aula ajudou a transformar essa insegurança em confiança.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__step">02</span>
+            <h3>Os desafios</h3>
+            <p>Erros, prazos e códigos difíceis fizeram parte do processo. Eles ensinaram paciência, foco e persistência.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__step">03</span>
+            <h3>As conquistas</h3>
+            <p>Cada projeto finalizado trouxe aquela sensação boa de evolução e mostrou que o esforço estava valendo a pena.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__step">04</span>
+            <h3>A evolução</h3>
+            <p>Hoje vejo uma versão mais preparada e segura para continuar aprendendo e construindo novos projetos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      MOMENTOS DIVERTIDOS
+      Galeria de lembranças com imagens placeholder vindas da pasta assets.
+    -->
+    <section class="section section--soft" id="momentos" aria-labelledby="momentos-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Momentos divertidos</p>
+          <h2 id="momentos-title">Pequenas cenas que marcaram minha jornada.</h2>
+          <p>Substitua as imagens e textos por fotos reais das aulas, trabalhos, intervalos e apresentações.</p>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card reveal">
+            <img src="assets/images/memory-01.svg" alt="Placeholder abstrato para lembrança de aula em grupo">
+            <div class="memory-card__body">
+              <h3>Trabalho em equipe</h3>
+              <p>Aquele projeto que começou com dúvidas e terminou com todo mundo comemorando junto.</p>
+            </div>
+          </article>
+          <article class="memory-card reveal">
+            <img src="assets/images/memory-02.svg" alt="Placeholder abstrato para lembrança de apresentação">
+            <div class="memory-card__body">
+              <h3>Apresentações</h3>
+              <p>O frio na barriga antes de falar e o orgulho depois de mostrar o resultado.</p>
+            </div>
+          </article>
+          <article class="memory-card reveal">
+            <img src="assets/images/memory-03.svg" alt="Placeholder abstrato para lembrança de momento descontraído">
+            <div class="memory-card__body">
+              <h3>Intervalos</h3>
+              <p>Conversas, risadas e pausas que deixaram a rotina mais leve e especial.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      AMIGOS QUE FIZ
+      Cards pensados para receber fotos reais e características marcantes.
+    -->
+    <section class="section" id="amigos" aria-labelledby="amigos-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Amigos que fiz</p>
+          <h2 id="amigos-title">Pessoas que tornaram o caminho mais bonito.</h2>
+          <p>Algumas amizades começam em uma sala de aula e seguem para muito além dela.</p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card reveal">
+            <img src="assets/images/avatar-01.svg" alt="Foto placeholder do amigo ou amiga 1">
+            <h3>Ana</h3>
+            <p>Companheira nos trabalhos e sempre pronta para ajudar.</p>
+            <span>Marcante: criatividade</span>
+          </article>
+          <article class="person-card reveal">
+            <img src="assets/images/avatar-02.svg" alt="Foto placeholder do amigo ou amiga 2">
+            <h3>Lucas</h3>
+            <p>Transformava os desafios em conversas leves e boas ideias.</p>
+            <span>Marcante: bom humor</span>
+          </article>
+          <article class="person-card reveal">
+            <img src="assets/images/avatar-03.svg" alt="Foto placeholder do amigo ou amiga 3">
+            <h3>Marina</h3>
+            <p>Organizada, dedicada e presente nos momentos importantes.</p>
+            <span>Marcante: parceria</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      PROFESSORES
+      Homenagem aos professores com agradecimentos curtos e personalizáveis.
+    -->
+    <section class="section section--soft" id="professores" aria-labelledby="professores-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Professores</p>
+          <h2 id="professores-title">Gratidão por quem ensinou com presença.</h2>
+          <p>Cada professor deixou uma contribuição importante na minha formação.</p>
+        </div>
+
+        <div class="teacher-grid">
+          <article class="teacher-card reveal">
+            <img src="assets/images/teacher-01.svg" alt="Foto placeholder do professor ou professora 1">
+            <div>
+              <h3>Prof. Carla</h3>
+              <p class="teacher-card__subject">Desenvolvimento Web</p>
+              <p>Obrigada por mostrar que tecnologia também é criatividade, cuidado e solução de problemas.</p>
+            </div>
+          </article>
+          <article class="teacher-card reveal">
+            <img src="assets/images/teacher-02.svg" alt="Foto placeholder do professor ou professora 2">
+            <div>
+              <h3>Prof. Renato</h3>
+              <p class="teacher-card__subject">Lógica de Programação</p>
+              <p>Obrigada por ensinar a pensar com clareza antes mesmo de escrever a primeira linha de código.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      O QUE APRENDI
+      Barras animadas representam evolução nos principais conhecimentos.
+    -->
+    <section class="section" id="aprendi" aria-labelledby="aprendi-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">O que aprendi</p>
+          <h2 id="aprendi-title">Conhecimentos que agora fazem parte da minha base.</h2>
+          <p>As barras são animadas quando a seção aparece na tela, usando Intersection Observer.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>HTML</h3>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar" aria-label="HTML 90%">
+              <span style="--level: 90%"></span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>CSS</h3>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar" aria-label="CSS 85%">
+              <span style="--level: 85%"></span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>JavaScript</h3>
+              <span>78%</span>
+            </div>
+            <div class="skill-bar" aria-label="JavaScript 78%">
+              <span style="--level: 78%"></span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>Git e GitHub</h3>
+              <span>74%</span>
+            </div>
+            <div class="skill-bar" aria-label="Git e GitHub 74%">
+              <span style="--level: 74%"></span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>Lógica</h3>
+              <span>82%</span>
+            </div>
+            <div class="skill-bar" aria-label="Lógica de programação 82%">
+              <span style="--level: 82%"></span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <h3>Projetos</h3>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar" aria-label="Projetos 88%">
+              <span style="--level: 88%"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      MEU FUTURO
+      Bloco inspirador com texto e imagem ilustrativa.
+    -->
+    <section class="section section--future" id="futuro" aria-labelledby="futuro-title">
+      <div class="container future-layout">
+        <div class="future-layout__text reveal">
+          <p class="eyebrow">Meu futuro</p>
+          <h2 id="futuro-title">O próximo capítulo começa com tudo que aprendi aqui.</h2>
+          <p>
+            Daqui alguns anos, quero olhar para trás e reconhecer este curso como um ponto de virada. Sonho em construir projetos úteis, continuar estudando, crescer na carreira e usar a tecnologia para criar soluções com propósito.
+          </p>
+          <p>
+            O futuro ainda tem muitas páginas em branco, mas agora eu tenho mais ferramentas, coragem e pessoas especiais na memória.
+          </p>
+        </div>
+
+        <figure class="future-layout__image reveal">
+          <img src="assets/images/future.svg" alt="Ilustração abstrata de uma janela aberta para o futuro">
+        </figure>
+      </div>
+    </section>
+
+    <!--
+      MENSAGEM FINAL
+      Carta de agradecimento que fecha a experiência com emoção e gratidão.
+    -->
+    <section class="section final-message" id="mensagem" aria-labelledby="mensagem-title">
+      <div class="container">
+        <article class="letter reveal">
+          <p class="eyebrow">Mensagem final</p>
+          <h2 id="mensagem-title">Uma carta de agradecimento</h2>
+          <p>
+            Agradeço por cada aula, cada conversa, cada orientação e cada desafio que me ajudou a crescer. Este curso foi mais do que uma etapa acadêmica: foi um período de descobertas, amizades e construção de confiança.
+          </p>
+          <p>
+            Levo comigo as memórias, os aprendizados e a certeza de que todo esforço deixou uma marca importante na minha história.
+          </p>
+          <blockquote>
+            “O que vivemos com dedicação se transforma em memória, aprendizado e caminho.”
+          </blockquote>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!--
+    Botão voltar ao topo.
+    Ele aparece somente depois que a pessoa rola a página.
+  -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">
+    ↑
+  </button>
+
+  <!--
+    Rodapé simples e elegante.
+    Atualize o nome abaixo para o nome real do autor.
+  -->
+  <footer class="site-footer">
+    <div class="container site-footer__content">
+      <p>Feito por <strong>Katheriny</strong> • 2026</p>
+      <p>Que cada lembrança seja impulso para continuar crescendo.</p>
+    </div>
+  </footer>
+
+  <!-- Arquivo JavaScript separado, conforme solicitado. -->
+  <script src="js/katheriny.js"></script>
+</body>
+</html>
