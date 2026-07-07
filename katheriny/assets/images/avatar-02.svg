@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="title desc">
-  <title id="title">Avatar placeholder 2</title>
-  <desc id="desc">Avatar abstrato para substituir pela foto de um amigo.</desc>
-  <rect width="300" height="300" rx="150" fill="#f2f4f7"/>
-  <circle cx="150" cy="112" r="52" fill="#111827" opacity=".72"/>
-  <path d="M58 262c20-62 58-92 92-92s72 30 92 92" fill="#4f8cff" opacity=".42"/>
-</svg>
